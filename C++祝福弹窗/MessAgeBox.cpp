@@ -378,6 +378,9 @@ void show_warn_tip() {
 }
 
 int main() {
+    HWND hwnd = GetForegroundWindow();
+    ShowWindow(hwnd, SW_MINIMIZE);
+    // 启动后自动最小化
     const int window_count = 150;
     vector<thread> threads;
 
